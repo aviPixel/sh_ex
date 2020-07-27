@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <core.custom_ui.SystemUISpaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:systemUI="top"
+            app:isConsumeInsets="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/bgYellow"
+            android:paddingStart="@dimen/app_margin"
+            android:paddingEnd="@dimen/app_margin"
+            android:paddingBottom="@dimen/app_margin"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/appTextTitle"
+                android:textColor="@color/white"
+                android:text="What your Goal"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingEnd="@dimen/app_margin"
+                android:paddingStart="@dimen/app_margin"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/app_margin_8"
+                android:background="@drawable/bg_ediitext_white"/>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvNewGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3"/>
+
+<!--                android:drawableEnd="@drawable/ic_menu_home_unselect"-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/app_margin"
+                    android:layout_marginEnd="@dimen/app_margin"
+                    android:background="@drawable/bg_edittext_red"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingEnd="@dimen/app_margin"
+                        android:paddingStart="@dimen/app_margin"
+                        android:singleLine="true"
+                        android:freezesText="true"
+                        android:textSize="@dimen/app_text_def"
+                        android:hint="Amount"
+                        android:background="@null"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/colorButtonNewGoal"
+                        android:gravity="center"
+                        android:textSize="@dimen/app_text_def"
+                        android:layout_marginEnd="@dimen/app_margin"
+                        android:text="THB"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="@dimen/app_margin"
+                    android:layout_marginEnd="@dimen/app_margin"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:background="@drawable/bg_edittext_red"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingEnd="@dimen/app_margin"
+                        android:paddingStart="@dimen/app_margin"
+                        android:singleLine="true"
+                        android:freezesText="true"
+                        android:textSize="@dimen/app_text_def"
+                        android:hint="Select Date"
+                        android:background="@null"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/colorButtonNewGoal"
+                        android:gravity="center"
+                        android:textSize="@dimen/app_text_def"
+                        android:layout_marginEnd="@dimen/app_margin"
+                        android:rotation="90"
+                        android:text=">"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

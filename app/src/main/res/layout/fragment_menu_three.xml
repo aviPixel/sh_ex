@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <core.custom_ui.SystemUISpaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:systemUI="top"
+            app:isConsumeInsets="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/bgYellow"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/frameStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivAch"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_menu_home_unselect"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Achievement"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="@dimen/app_margin"
+                    android:layout_toEndOf="@+id/ivAch"
+                    android:textSize="@dimen/app_text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level 2"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="@dimen/app_margin"
+                    android:layout_toEndOf="@+id/ivAch"
+                    android:layout_below="@+id/tvTitle"
+                    android:textSize="@dimen/app_text_20"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAchievement"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/app_margin_8"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"/>
+
+    </LinearLayout>
+
+</FrameLayout>

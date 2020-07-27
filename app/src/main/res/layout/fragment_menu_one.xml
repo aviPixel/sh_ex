@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <core.custom_ui.SystemUISpaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:systemUI="top"
+            app:isConsumeInsets="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bgYellow"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListGoal"
+                android:layout_marginTop="@dimen/app_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/app_margin_8"
+                android:paddingEnd="@dimen/app_margin_8"
+                android:layout_marginBottom="@dimen/app_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvAllGoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:textColor="@color/white"
+                    android:gravity="bottom"
+                    style="@style/appTextDef"
+                    android:textStyle="bold"
+                    android:text="3 Goal"
+                    tools:text="tvAllGoal"/>
+
+                <TextView
+                    android:id="@+id/tvPriceGoal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="end|bottom"
+                    style="@style/appTextDef"
+                    tools:text="tvPriceGoal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNewGoal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/app_margin_8"
+            android:text="@string/btn_new_goal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/app_text_title"
+            android:textAllCaps="false"
+            android:background="@drawable/shape_button_new_goal">
+
+        </Button>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_one_label_title_offer"
+                    android:layout_marginStart="@dimen/app_margin"
+                    style="@style/appTextTitle"/>
+
+<!--                <core.util.FrameInterceptTouchEvent-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvListOffer"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/app_margin"/>
+
+<!--                </core.util.FrameInterceptTouchEvent>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_margin"
+                    android:text="@string/menu_one_label_title_suggest"
+                    android:layout_marginStart="@dimen/app_margin"
+                    style="@style/appTextTitle"/>
+
+<!--                <core.util.FrameInterceptTouchEvent-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvListSuggest"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/app_margin"
+                        android:layout_marginBottom="@dimen/app_margin"/>
+
+<!--                </core.util.FrameInterceptTouchEvent>-->
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

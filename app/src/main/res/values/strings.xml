@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">App Example</string>
+
+<!--    menu_one-->
+    <string name="btn_new_goal">+ New Goal</string>
+    <string name="menu_one_label_title_offer">Best Offer</string>
+    <string name="menu_one_label_title_suggest">Suggest for you</string>
+    <string name="label_price_unit">%s THB</string>
+    <string name="label_days_left">%s days left</string>
+
+</resources>

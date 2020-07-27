@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_margin_5">5dp</dimen>
+    <dimen name="app_margin_8">8dp</dimen>
+    <dimen name="app_margin">16dp</dimen>
+    <dimen name="app_margin_24">24dp</dimen>
+    <dimen name="app_margin_32">32dp</dimen>
+    <dimen name="app_margin_64">64dp</dimen>
+
+<!--    frame back-->
+    <dimen name="frame_back_size">25dp</dimen>
+
+<!--    text-->
+    <dimen name="app_text_20">20sp</dimen>
+    <dimen name="app_text_title">18sp</dimen>
+    <dimen name="app_text_def">16sp</dimen>
+    <dimen name="app_text_detail">14sp</dimen>
+    <dimen name="app_text_sup_detail">12sp</dimen>
+
+<!--    main menu-->
+    <dimen name="main_menu_height">65dp</dimen>
+
+</resources>

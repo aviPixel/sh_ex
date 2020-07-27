@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<com.sh.ex.menuone.view.ViewItemGoal-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:id="@+id/MainRootView"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content">-->
+<!--</com.sh.ex.menuone.view.ViewItemGoal>-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MainRootView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/app_margin"
+    android:layout_marginTop="@dimen/app_margin"
+    android:layout_marginEnd="@dimen/app_margin_8"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/frameItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/app_margin"
+        android:paddingTop="@dimen/app_margin_8"
+        android:paddingEnd="@dimen/app_margin_8"
+        android:paddingStart="@dimen/app_margin_8"
+        android:background="@drawable/bg_item_goal_green">
+
+        <RelativeLayout
+            android:id="@+id/framePrice"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/ivGoal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:tint="@color/colorButtonNewGoal"
+                android:src="@drawable/ic_menu_home_unselect"/>
+
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                style="@style/appTextSupDetail"
+                tools:text="tvTotalPrice"/>
+
+            <TextView
+                android:id="@+id/tvCurrentPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvTotalPrice"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorButtonNewGoal"
+                android:textStyle="bold"
+                style="@style/appTextDetail"
+                tools:text="tvCurrentPrice"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/framePersent"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="@dimen/app_margin_8"
+            android:layout_below="@+id/framePrice">
+
+            <FrameLayout
+                android:id="@+id/frameStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_status_goal"/>
+
+            <FrameLayout
+                android:id="@+id/frameStatusCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_status_current_goal"
+                tools:layout_width="100dp"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/framePersent"
+            style="@style/appTextDetail"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/app_margin_8"
+            tools:text="tvTitle"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/tvFeel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                style="@style/appTextSupDetail"
+                tools:text="tvFeel"/>
+
+            <TextView
+                android:id="@+id/tvDayLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                style="@style/appTextSupDetail"
+                tools:text="tvDayLeft"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:id="@+id/frameItem"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:paddingBottom="@dimen/app_margin"-->
+<!--            android:paddingTop="@dimen/app_margin"-->
+<!--            android:paddingEnd="@dimen/app_margin_8"-->
+<!--            android:paddingStart="@dimen/app_margin_8"-->
+<!--            android:background="@drawable/bg_item_goal_green">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentTop="true">-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:id="@+id/framePrice"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentTop="true"-->
+<!--                            tools:background="@color/green">-->
+
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/ivGoal"-->
+<!--                                    android:layout_width="40dp"-->
+<!--                                    android:layout_height="40dp"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_alignParentStart="true"-->
+<!--                                    android:tint="@color/colorButtonNewGoal"-->
+<!--                                    android:src="@drawable/ic_menu_home_unselect"/>-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/tvTotalPrice"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentBottom="true"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:textColor="@color/black"-->
+<!--                                    style="@style/appTextTitle"-->
+<!--                                    tools:text="tvTotalPrice"/>-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/tvCurrentPrice"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_above="@+id/tvTotalPrice"-->
+<!--                                    android:layout_alignParentEnd="true"-->
+<!--                                    android:textColor="@color/colorButtonNewGoal"-->
+<!--                                    style="@style/appTextDef"-->
+<!--                                    tools:text="tvCurrentPrice"/>-->
+
+
+<!--                        </RelativeLayout>-->
+
+<!--                        <FrameLayout-->
+<!--                            android:id="@+id/framePersent"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="30dp"-->
+<!--                            android:layout_marginTop="@dimen/app_margin"-->
+<!--                            android:layout_below="@+id/framePrice">-->
+
+<!--                                <FrameLayout-->
+<!--                                    android:id="@+id/frameStatus"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:background="@drawable/bg_status_goal"/>-->
+
+<!--                                <FrameLayout-->
+<!--                                    android:id="@+id/frameStatusCurrent"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:background="@drawable/bg_status_current_goal"-->
+<!--                                    tools:layout_width="100dp"/>-->
+
+<!--                        </FrameLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvTitle"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/framePersent"-->
+<!--                            style="@style/appTextTitle"-->
+<!--                            android:textSize="@dimen/app_text_20"-->
+<!--                            android:layout_marginTop="@dimen/app_margin"-->
+<!--                            tools:text="tvTitle"/>-->
+
+<!--                </RelativeLayout>-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentBottom="true">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvFeel"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentStart="true"-->
+<!--                            style="@style/appTextDef"-->
+<!--                            tools:text="tvFeel"/>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvDayLeft"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            style="@style/appTextDef"-->
+<!--                            tools:text="tvDayLeft"/>-->
+
+<!--                </RelativeLayout>-->
+
+<!--        </LinearLayout-->
+<!--            android:orientation="horizontal"-->>-->
+
+</androidx.cardview.widget.CardView>
